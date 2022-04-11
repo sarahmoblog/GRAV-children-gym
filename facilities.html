@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+    <title>Assignment 2</title>
+</head>
+<body style="background-color:lightyellow">
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="membership.html">Become a Member Now!</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+  </div>
+<!-- why doesn't the block change to about us?-->
+
+
+<!--<style>
+  a:link {
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(255, 0, 43);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  </style>-->
+
+<img src="logo.jpg" alt="Gravity" width="270" height="80">
+
+<div style="margin-left:15%; margin-right:15%; padding:1px 16px;height:1000px; color:black; text-align:center;">
+  <!-- <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3> -->
+  <!--<p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p> -->
+  <style>
+    * {box-sizing: border-box}
+    .mySlides1, .mySlides2 {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 2000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+      background-color: #f1f1f1;
+      color: black;
+    }
+    </style>
+<h2>Gym</h2>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="gym.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="gym2.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+<p>Our gym is designed to provide your children with options to work out the way optimal for his growth. Our innovative fitness offerings include cutting-edge lego bricks, premium foam, a 1-on-1  playground area, plus functional training zones as you tower over spectacular, elevated views of Marina Bay and the CBD. </p>
+<br>
+<h2>CHEERLEADING STUDIO</h2>
+<img src="CHEERLEADING STUDIO.jpg" alt="Fitness 3D Proscanner" style="width:100%" class="center">
+<p>With premium cushion to break their fall and expert trainers to guide them through, our studio space is spacious enough to accommodate up to 30 people with space for children to roam about </p>
+<br>
+<h2>SWIMMING</h2>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="SWIMMING.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="SWIMMING2.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<p>
+Our open air swimming pool has an amazing slide children can play with after lessons. Adding on, there is a mini sky garden for parents to rest and relax a they wait for their children to end their lesson.
+<br>
+<h2>Additional Perks: </h2>
+<div class="container">
+  <img src="1 on 1 coaching.jpg" alt="Personal Fitness" style="width:100%;">
+  <div class="content">
+    <h1>1 on 1 coaching</h1>
+    <p>Parents who want to optimise growth can book a 1 on 1 coaching session for their children (only valid for gym and swimming lessons)</p>
+  </div>
+</div>
+<br>
+<div class="container">
+  <img src="Group Fitness.jpg" alt="Group Fitness" style="width:100%;">
+  <div class="content">
+    <h1>Group Fitness</h1>
+    <p>Parents who want to learn more about the benefits of exercising in a group setting can check it out here:</p>
+    <p><a href="https://raisingchildren.net.au/school-age/connecting-communicating/connecting/supporting-friendships#:~:text=Friendships%20help%20children%20develop%20important,and%20make%20friends%20at%20school. " style="color: darkblue">Friendships and Children</a></p>
+    <p><a href="https://www.epl.ca/blogs/post/importance-of-play-for-kids/ " style="color: darkblue">The Power of Play with Others)</a></p>
+    <br>
+  </div>
+</div>
+
+<script>
+  var slideIndex = [1,1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+  
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+  
+  function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}    
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    x[slideIndex[no]-1].style.display = "block";  
+  }
+  </script>
+
+<!-- insert map? -->
+
+  <!--<p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p> -->
+ <!-- <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+-->
+</div>
+
+</body>
+</html>
